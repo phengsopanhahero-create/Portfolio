@@ -33,10 +33,11 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 sm:px-10">
+        {/* Top bar */}
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 dark:bg-blue-600 flex items-center justify-center text-white dark:text-white font-bold text-sm group-hover:bg-blue-500 dark:group-hover:bg-blue-500 transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm group-hover:bg-blue-500 transition-colors">
               PS
             </div>
             <span className="font-semibold text-slate-900 dark:text-white hidden sm:block">
@@ -62,41 +63,45 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <a
               href={`mailto:${personalInfo.email}`}
-              className="px-4 py-2 rounded-lg bg-blue-600 dark:bg-blue-600 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-white text-sm font-medium transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30 dark:hover:shadow-blue-500/30"
+              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30"
             >
               Hire Me
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <div className="space-y-1.5">
-              <span
-                className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
-                  menuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
-                  menuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
-            </div>
-          </button>
+          {/* Mobile: Theme Toggle + Hamburger */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white p-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <div className="space-y-1.5">
+                <span
+                  className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
+                    menuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
+                    menuOpen ? "opacity-0" : ""
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-current transition-all duration-300 ${
+                    menuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -117,7 +122,7 @@ export default function Navbar() {
             ))}
             <a
               href={`mailto:${personalInfo.email}`}
-              className="block mt-2 px-4 py-3 bg-blue-600 dark:bg-blue-600 hover:bg-blue-500 dark:hover:bg-blue-500 text-white dark:text-white text-sm font-medium rounded-lg text-center transition-colors"
+              className="block mt-2 px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg text-center transition-colors"
             >
               Hire Me
             </a>
