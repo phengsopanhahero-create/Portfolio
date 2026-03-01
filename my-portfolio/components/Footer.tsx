@@ -10,8 +10,6 @@ const navLinks = [
 ];
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="relative border-t border-slate-200 dark:border-white/8 bg-slate-50 dark:bg-[#080810]">
       <div className="max-w-6xl mx-auto px-5 sm:px-10 py-10">
@@ -83,19 +81,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-6 border-t border-slate-200 dark:border-[rgba(59,130,246,0.1)] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-slate-400 dark:text-slate-600 text-xs">
-            © {year} {personalInfo.name}. All rights reserved.
-          </p>
-          <p className="text-slate-400 dark:text-slate-700 text-xs flex items-center gap-1">
-            Built with
-            <span className="text-blue-500 mx-1">Next.js</span>
-            &amp;
-            <span className="text-blue-500 mx-1">Tailwind CSS</span>
-            by Sopanha
-          </p>
-        </div>
       </div>
     </footer>
   );
