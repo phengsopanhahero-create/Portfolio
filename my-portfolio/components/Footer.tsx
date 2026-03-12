@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="text-slate-900 dark:text-white font-semibold">{personalInfo.name}</span>
             </div>
             <p className="text-slate-500 text-xs leading-relaxed">
-              AI Engineer & Data Scientist passionate about building innovative solutions with ML, DL, RAG, and LLM technologies.
+              AI Engineer & Web Developer  passionate about building innovative solutions with ML, DL, RAG, and LLM technologies.
             </p>
           </div>
 
