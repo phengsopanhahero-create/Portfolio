@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { personalInfo } from "@/data/portfolio";
+
+const EMAILJS_SERVICE_ID = "service_5bequ3z";
+const EMAILJS_TEMPLATE_ID = "template_268uu9k";
+const EMAILJS_PUBLIC_KEY = "9Bi166b0R6FtldL80";
 
 const socialLinks = [
   {
@@ -51,16 +56,23 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("sending");
-    const mailtoLink = `mailto:${personalInfo.email}?subject=Message from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${encodeURIComponent(form.email)}`;
-    window.location.href = mailtoLink;
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { from_name: form.name, reply_to: form.email, message: form.message },
+        EMAILJS_PUBLIC_KEY
+      );
       setStatus("sent");
       setForm({ name: "", email: "", message: "" });
       setTimeout(() => setStatus("idle"), 3000);
-    }, 500);
+    } catch {
+      setStatus("idle");
+      alert("Failed to send message. Please try again.");
+    }
   }
 
   return (
