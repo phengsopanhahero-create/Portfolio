@@ -6,8 +6,8 @@ export const personalInfo = {
   phone: "060 271 125",
   github: "https://github.com/phengsopanhahero-create",
   location: "Phnom Penh, Cambodia",
-  bio: "An AI Engineer & Web Developer  passionate about building intelligent solutions for real-world problems. Experienced in ML, DL, RAG, LLMs, and web development. Open to collaboration and new opportunities.",
-  roles: ["AI Engineer", "Web Developer", "Data Scientist"],
+  bio: "An Data Analyst & AI Engineer  passionate about building intelligent solutions for real-world problems. Experienced in ML, DL, RAG, LLMs, and web development. Open to collaboration and new opportunities.",
+  roles: ["AI Engineer", "Web Developer", "Data Analyst"],
 };
 
 export const skills = {
@@ -50,6 +50,55 @@ export const techStack = [
 ];
 
 export const projects = [
+  {
+    id: 9,
+    title: "AI Agent for Multi-Branch Business Management System",
+    period: "May 2026 – Jun 2026",
+    description: "Built an AI agent that centralizes sales, inventory, and staff data from multiple business branches into a single PostgreSQL warehouse, with a natural-language query assistant that turns management questions into validated SQL and charts.",
+    techs: ["Python", "LLM (RAG + function calling)", "PostgreSQL", "FastAPI", "React/Next.js", "Recharts"],
+    highlights: [
+      "Centralized sales, inventory, and staff data across branches via scheduled ETL jobs",
+      "Natural-language query assistant converts questions into validated SQL with supporting charts",
+      "Performance analytics layer flags low-inventory and underperforming branches automatically",
+      "React/Next.js dashboard with automated weekly/monthly report delivery via email and chat",
+    ],
+    color: "#8b5cf6",
+    image: "",
+    category: ["AI/ML", "Web Development"],
+    comingSoon: true,
+  },
+  {
+    id: 10,
+    title: "Chamnes Finance Chatbot (Telegram)",
+    period: "May 2026 – July 2026",
+    description: "Built a Telegram chatbot that helps users track income, expenses, and savings goals through natural-language messages instead of manual forms, powered by an LLM-based intent and entity extraction flow.",
+    techs: ["Python", "Telegram Bot API", "LLM", "PostgreSQL", "Node.js", "REST APIs"],
+    highlights: [
+      "LLM-powered intent and entity extraction parses messages like \"spent $12 on lunch\" into structured transactions",
+      "Supports both Khmer and English natural-language input",
+      "Automated monthly summaries and budget-limit alerts pushed directly in chat",
+      "Financial Q&A assistant grounded in the user's own transaction history",
+    ],
+    color: "#0ea5e9",
+    image: "/certs/chomnesfin.png",
+    category: "AI/ML",
+  },
+  {
+    id: 11,
+    title: "Real-Time Sales Analytics Platform",
+    period: "June 2026 – July 2026",
+    description: "Built an end-to-end ETL pipeline extracting sales data from PostgreSQL into Amazon S3 and Redshift, with a star schema warehouse and Power BI dashboards for revenue, sales trends, and customer behavior.",
+    techs: ["Python", "PostgreSQL", "Apache Airflow", "Docker", "Amazon S3", "Amazon Redshift", "SQL", "Power BI"],
+    highlights: [
+      "End-to-end ETL pipeline from PostgreSQL to Amazon S3 and Redshift",
+      "Designed a star schema data warehouse",
+      "Automated daily ETL pipelines and data quality checks with Apache Airflow and Docker",
+      "Power BI dashboards analyzing revenue, sales trends, customer behavior, and product performance",
+    ],
+    color: "#f97316",
+    image: "/certs/realtime_saleanalytic.png",
+    category: "Data Science",
+  },
   {
     id: 1,
     title: "Fine-Tune LLM — Cambodia Financial",
@@ -174,10 +223,10 @@ export const projects = [
 
 export const experience = [
   {
-    role: "Software R&D",
+    role: "Software Developer",
     company: "Freelance",
-    period: "Dec 2025 – Current",
-    description: "Researched and implemented LLM, RAG, ML, DL, and AI solutions for real-world applications. Built full-stack web applications (frontend & backend), designed REST APIs, integrated databases, and performed data analytics including ETL, data visualization, statistical analysis, and predictive modeling.",
+    period: "May 2026 – Current",
+    description: "Build a real-world project focus on web development integrate with Ai.",
 
     color: "#3b82f6",
   },
@@ -203,7 +252,7 @@ export const education = [
   {
     degree: "Bachelor of Data Science and Engineering",
     school: "Royal University of Phnom Penh (RUPP)",
-    period: "Jan 2025 – Jun 2028",
+    period: "2024 – 2028",
 
     color: "#3b82f6",
   },

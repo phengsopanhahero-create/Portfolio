@@ -63,13 +63,21 @@ export default function Projects() {
             >
               {/* Project image */}
               <div className="relative w-full h-44 bg-slate-200 dark:bg-slate-800 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
-                />
+                {project.comingSoon ? (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-slate-400 dark:text-slate-500 text-sm font-medium tracking-widest uppercase">
+                      Coming Soon
+                    </span>
+                  </div>
+                ) : (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+                  />
+                )}
               </div>
 
               <div className="p-6">

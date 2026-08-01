@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/data/portfolio";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { RiRobot2Fill } from "react-icons/ri";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -37,8 +38,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm group-hover:bg-blue-500 transition-colors">
-              PS
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white group-hover:bg-blue-500 transition-colors">
+              <RiRobot2Fill className="w-5 h-5" />
             </div>
             <span className="font-semibold text-slate-900 dark:text-white hidden sm:block">
               {personalInfo.name.split(" ")[1]}

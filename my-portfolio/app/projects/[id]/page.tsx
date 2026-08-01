@@ -33,14 +33,22 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Hero image */}
         <div className="w-full rounded-2xl overflow-hidden mb-8 bg-slate-200 dark:bg-slate-800">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={1200}
-            height={900}
-            className="w-full h-auto object-contain"
-            priority
-          />
+          {project.comingSoon ? (
+            <div className="w-full h-64 flex items-center justify-center">
+              <span className="text-slate-400 dark:text-slate-500 text-lg font-medium tracking-widest uppercase">
+                Coming Soon
+              </span>
+            </div>
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1200}
+              height={900}
+              className="w-full h-auto object-contain"
+              priority
+            />
+          )}
         </div>
 
         {/* Project info card */}
