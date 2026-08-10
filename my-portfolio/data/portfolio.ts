@@ -6,7 +6,7 @@ export const personalInfo = {
   phone: "060 271 125",
   github: "https://github.com/phengsopanhahero-create",
   location: "Phnom Penh, Cambodia",
-  bio: "A Data Analyst & AI Engineer  passionate about building intelligent solutions for real-world problems. Experienced in ML, DL, RAG, LLMs, and web development. Open to collaboration and new opportunities.",
+  bio: "An AI Engineer & Data Analyst  passionate about building intelligent solutions for real-world problems. Experienced in ML, DL, RAG, LLMs, and web development. Open to collaboration and new opportunities.",
   roles: ["AI Engineer", "Web Developer", "Data Analyst"],
 };
 
