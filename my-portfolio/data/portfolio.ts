@@ -252,7 +252,7 @@ export const education = [
   {
     degree: "Bachelor of Data Science and Engineering",
     school: "Royal University of Phnom Penh (RUPP)",
-    period: "2024 – 2028",
+    period: "2024 – Current",
 
     color: "#3b82f6",
   },
